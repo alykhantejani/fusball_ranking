@@ -18,10 +18,10 @@ def update_ratings(ratings, dataset):
         historical_ratings[k].append(v)
 
     for i in range(len(df)):
-        p1_name = df.iloc[i]['P1'].lower()
-        p2_name = df.iloc[i]['P2'].lower()
-        p3_name = df.iloc[i]['P3'].lower()
-        p4_name = df.iloc[i]['P4'].lower()
+        p1_name = df.iloc[i]['P1'].lower().strip()
+        p2_name = df.iloc[i]['P2'].lower().strip()
+        p3_name = df.iloc[i]['P3'].lower().strip()
+        p4_name = df.iloc[i]['P4'].lower().strip()
         p1 = ratings[p1_name]
         p2 = ratings[p2_name]
         p3 = ratings[p3_name]
